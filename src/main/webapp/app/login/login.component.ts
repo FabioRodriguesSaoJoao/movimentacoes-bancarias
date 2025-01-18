@@ -8,8 +8,9 @@ import { AccountService } from 'app/core/auth/account.service';
 
 @Component({
   selector: 'jhi-login',
-  imports: [SharedModule, FormsModule, ReactiveFormsModule, RouterModule],
   templateUrl: './login.component.html',
+  styleUrl: './login.component.scss',
+  imports: [SharedModule, FormsModule, ReactiveFormsModule, RouterModule],
 })
 export default class LoginComponent implements OnInit, AfterViewInit {
   username = viewChild.required<ElementRef>('username');
@@ -45,7 +46,7 @@ export default class LoginComponent implements OnInit, AfterViewInit {
         this.authenticationError.set(false);
         if (!this.router.getCurrentNavigation()) {
           // There were no routing during login (eg from navigationToStoredUrl)
-          this.router.navigate(['']);
+          this.router.navigate(['']); // mudar aqui
         }
       },
       error: () => this.authenticationError.set(true),

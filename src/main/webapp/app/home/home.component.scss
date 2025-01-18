@@ -1,23 +1,128 @@
-/* ==========================================================================
-Main page styles
-========================================================================== */
-
-.hipster {
-  display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
-  background-size: contain;
+/* Centralize o conteúdo */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #ff9500, #ffcc80); /* Gradiente em tons de laranja */
+  color: white;
+  font-family: 'Arial', sans-serif;
 }
 
-/* wait autoprefixer update to allow simple generation of high pixel density media query */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  .hipster {
-    background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
-    background-size: contain;
-  }
+.home-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  // max-width: 400px;
+  min-width: 350px; /* Largura mínima ajustada */
+  min-height: 200px; /* Altura mínima ajustada */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.welcome-message {
+  color: #ff9500; /* Cor laranja */
+  margin-bottom: 20px;
+}
+
+.brand {
+  color: #ff6f00; /* Um tom mais escuro de laranja */
+  font-weight: bold;
+}
+
+.login-container .alert {
+  margin: 15px 0;
+}
+
+.alert-link {
+  color: #ff6f00;
+  text-decoration: underline;
+}
+
+.alert-link:hover {
+  color: #ff9500;
+}
+
+.logged-message {
+  position: absolute; /* Posicionamento absoluto */
+  top: 35px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  background-color: #ffcc80; /* Fundo laranja */
+  color: black; /* Texto branco */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho do texto */
+  font-weight: bold; /* Destaque no texto */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+  /* Destaque para o nome do usuário em laranja claro */
+}
+
+.logged-message strong {
+  color: black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 10px; /* Espaçamento entre os botões e o conteúdo abaixo */
+}
+
+/* Estilos para os botões */
+.action-button {
+  background-color: #ffffff; /* Fundo branco */
+  color: #ff9500; /* Texto laranja */
+  border: 2px solid #ff9500; /* Borda laranja */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 0.9rem; /* Tamanho do texto */
+  font-weight: bold;
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Transições suaves */
+}
+
+/* Efeitos ao passar o mouse */
+.action-button:hover {
+  background-color: #ff9500; /* Fundo laranja */
+  color: white; /* Texto branco */
+}
+.table-container {
+  margin-top: 20px; /* Espaçamento entre os botões e a tabela */
+  overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+}
+.styled-table {
+  width: 100%; /* Tabela ocupa toda a largura disponível */
+  border-collapse: collapse; /* Remove espaçamentos entre células */
+  background-color: #ffffff; /* Fundo branco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor da tabela */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante o arredondamento nas bordas */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px; /* Espaçamento interno das células */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-bottom: 1px solid #ddd; /* Linha divisória entre as células */
+}
+
+.styled-table thead th {
+  background-color: #ff9500; /* Fundo laranja para o cabeçalho */
+  color: #ffffff; /* Texto branco */
+  font-weight: bold; /* Destaque no texto */
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fundo alternado para as linhas pares */
+}
+
+.styled-table tbody tr:hover {
+  background-color: #ffcc80; /* Cor de destaque ao passar o mouse */
 }
